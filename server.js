@@ -34,9 +34,9 @@ const sendStkPush = async () => {
         Timestamp: timestamp,
         TransactionType: "CustomerPayBillOnline",
         Amount: "10",
-        PartyA: "254114018035",
+        PartyA: "254705243111",
         PartyB: shortCode,
-        PhoneNumber: "254114018035",
+        PhoneNumber: "254705243111",
         AccountReference: "account",
         TransactionDesc: "test",
         CallBackURL: "https://mpesastk-e28452b2a3a3.herokuapp.com/mpesa/callback"
