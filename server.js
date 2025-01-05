@@ -79,7 +79,7 @@ app.post('/mpesa/callback', (req, res) => {
 });
 
 // Start the server (assuming your cloud provider allows incoming traffic on port 3000)
-const PORT = 3000;
+const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
     console.log(`Server is running on https://mpesastk-e28452b2a3a3.herokuapp.com:${PORT}`);
 });
