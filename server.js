@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 const consumerKey = "ERkqnycHkHAhBEGSnJLYYZdZVVZZj9GQn75faJS9bqhW25pA";
 const consumerSecret = "MHnGXDwv6szWXFjXM0I8ALPQEMvnZACcZHDf1F95kaW6xAvmwrBmlFrv4x2bAVUT";
 const shortCode = "174379";
-const passkey = "m9wOyqnmSKHs4qe/p8aA3wHEZkmlTbmad8l7EoTV0gv2fVDziXqlHbAH0p4g/n8rTVVOCqwwYL/K+pj6V0bPg5se+KASQe7kZBck3bcV5FVpcvnk5fkBgcU2YCuns+aYEZNIWqSowOvbaHSF4VzdLld4HBd3/CCIREAyDLk1g9SZxZxh6yXPEwjkcnO/altx92P2igF8zXXEWDs6pAs5Gjz8GrzU2OS4PAf8YLwNiEe/dMqAzUhl+QA5n9zLlbewH8uDkcD1HEWfO+CRsiEnl7r8uUWkayMQzN0COji1Ahqa5baGmW+byBs9KGInaYSR76uDMj7LGG54KjOUfH/NWQ==";
+const passkey = "";
 
 const getAccessToken = async () => {
     const url = "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials";
