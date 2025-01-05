@@ -54,12 +54,12 @@ const sendStkPush = async (callbackUrl) => {
         "Timestamp": timestamp,
         "TransactionType": "CustomerPayBillOnline",
         "Amount": "10",
-        "PartyA": "254708374149",
+        "PartyA": "254114018035",
         "PartyB": shortCode,
-        "PhoneNumber": "254708374149",
+        "PhoneNumber": "254114018035",
         "AccountReference": "account",
         "TransactionDesc": "test",
-        "CallBackURL": callbackUrl // Callback URL
+        "CallBackURL": "https://mpesastk-e28452b2a3a3.herokuapp.com/mpesa/callback" // Callback URL
     };
 
     try {
@@ -81,11 +81,7 @@ app.post('/mpesa/callback', (req, res) => {
 // Start the server (assuming your cloud provider allows incoming traffic on port 3000)
 const PORT = 3000;
 app.listen(PORT, () => {
-    console.log(`Server is running on http://your-public-ip:${PORT}`);
+    console.log(`Server is running on https://mpesastk-e28452b2a3a3.herokuapp.com:${PORT}`);
 });
 
-// Call the STK Push function with the cloud server's callback URL
-// Update the callback URL to use your public IP or domain (e.g., http://your-public-ip:3000/mpesa/callback)
-sendStkPush('http://your-public-ip:3000/mpesa/callback'); // For public IP
-// OR
-// sendStkPush('https://yourdomain.com/mpesa/callback'); // For domain name
+ sendStkPush('https://mpesastk-e28452b2a3a3.herokuapp.com/mpesa/callback'); // For domain name
