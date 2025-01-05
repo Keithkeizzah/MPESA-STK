@@ -12,7 +12,7 @@ const passkey = "";
 
 const getAccessToken = async () => {
     const url = "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials";
-    const encodedCredentials = Buffer.from(consumerKey + ":" + consumerSecret).toString('base64');
+    const encodedCredentials = new Buffer.from(consumerKey + ":" + consumerSecret).toString('base64');
     const headers = {
         'Authorization': "Basic " + encodedCredentials,
         'Content-Type': 'application/json'
@@ -24,7 +24,7 @@ const getAccessToken = async () => {
 const sendStkPush = async () => {
     const token = await getAccessToken();
     const timestamp = new Date().toISOString().replace(/[-T:.Z]/g, '').slice(0, 14);
-    const stk_password = Buffer.from(shortCode + passkey + timestamp).toString("base64");
+    const stk_password = new Buffer.from(shortCode + passkey + timestamp).toString("base64");
 
     const url = "https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest";
     const headers = { 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' };
@@ -34,9 +34,9 @@ const sendStkPush = async () => {
         Timestamp: timestamp,
         TransactionType: "CustomerPayBillOnline",
         Amount: "10",
-        PartyA: "254114018035",
+        PartyA: "254729389423",
         PartyB: shortCode,
-        PhoneNumber: "254114018035",
+        PhoneNumber: "254729389423",
         AccountReference: "account",
         TransactionDesc: "test",
         CallBackURL: "https://mpesastk-e28452b2a3a3.herokuapp.com/mpesa/callback"
