@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 const consumerKey = "ERkqnycHkHAhBEGSnJLYYZdZVVZZj9GQn75faJS9bqhW25pA";
 const consumerSecret = "MHnGXDwv6szWXFjXM0I8ALPQEMvnZACcZHDf1F95kaW6xAvmwrBmlFrv4x2bAVUT";
 const shortCode = "174379"; // sandbox shortCode
-const passkey = "bfb279f9aa9bdbcf158e97dd71a467cd2b7fa7dbf4f02b0c6e5c481b4b2b8d6a";
+const passkey = "m9wOyqnmSKHs4qe/p8aA3wHEZkmlTbmad8l7EoTV0gv2fVDziXqlHbAH0p4g/n8rTVVOCqwwYL/K+pj6V0bPg5se+KASQe7kZBck3bcV5FVpcvnk5fkBgcU2YCuns+aYEZNIWqSowOvbaHSF4VzdLld4HBd3/CCIREAyDLk1g9SZxZxh6yXPEwjkcnO/altx92P2igF8zXXEWDs6pAs5Gjz8GrzU2OS4PAf8YLwNiEe/dMqAzUhl+QA5n9zLlbewH8uDkcD1HEWfO+CRsiEnl7r8uUWkayMQzN0COji1Ahqa5baGmW+byBs9KGInaYSR76uDMj7LGG54KjOUfH/NWQ==";
 
 // Get Access Token function
 const getAccessToken = async () => {
