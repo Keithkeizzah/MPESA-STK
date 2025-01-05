@@ -47,7 +47,25 @@ const sendStkPush = async () => {
 };
 
 app.post('/mpesa/callback', (req, res) => {
-    console.log('Callback received:', JSON.stringify(req.body, null, 2));
+    const callbackData = req.body;
+
+    if (callbackData.Body?.stkCallback?.ResultCode === 0) {
+        const details = callbackData.Body.stkCallback.CallbackMetadata.Item.reduce((acc, item) => {
+            acc[item.Name] = item.Value;
+            return acc;
+        }, {});
+
+        console.log('Payment successful:');
+        console.log('Amount:', details.Amount);
+        console.log('MpesaReceiptNumber:', details.MpesaReceiptNumber);
+        console.log('TransactionDate:', details.TransactionDate);
+        console.log('PhoneNumber:', details.PhoneNumber);
+
+        // You can save this data to a database or perform any other action
+    } else {
+        console.log('Payment failed or was cancelled:', callbackData.Body.stkCallback.ResultDesc);
+    }
+
     res.status(200).send({ ResultCode: 0, ResultDesc: "Accepted" });
 });
 
