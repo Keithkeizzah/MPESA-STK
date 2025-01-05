@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 const consumerKey = "ERkqnycHkHAhBEGSnJLYYZdZVVZZj9GQn75faJS9bqhW25pA";
 const consumerSecret = "MHnGXDwv6szWXFjXM0I8ALPQEMvnZACcZHDf1F95kaW6xAvmwrBmlFrv4x2bAVUT";
 const shortCode = "174379";
-const passkey = "";
+const passkey = "l7YkN12fWfX8MbdXqPUA0EmBPlQe6tWk";
 
 const getAccessToken = async () => {
     const url = "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials";
