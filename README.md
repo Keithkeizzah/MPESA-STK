@@ -1,4 +1,3 @@
-Here’s a polished and visually appealing version of the README.md with clickable links and a better structure:
 
 
 ---
@@ -182,7 +181,7 @@ node index.js
 Use a tool like Postman or cURL to send a POST request.
 
 
-4. Check the Callback URL for responses.
+4. Check the Callback URL or console for responses.
 
 
 
@@ -206,5 +205,4 @@ This project is for testing and educational purposes only. Ensure you adhere to 
 
 ---
 
-Let me know if you need further customizations!
 
