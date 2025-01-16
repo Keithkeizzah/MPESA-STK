@@ -6,7 +6,7 @@ const config = require('./config');
 const app = express();
 app.use(bodyParser.json());
 
-const { consumerKey, consumerSecret, shortCode, passkey, number, amount } = config;
+const { consumerKey, consumerSecret, shortCode, passkey, number, amount, callbackUrl } = config;
 
 const getAccessToken = async () => {
     const url = "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials";
@@ -37,7 +37,7 @@ const sendStkPush = async () => {
         PhoneNumber: number,
         AccountReference: "account",
         TransactionDesc: "test",
-        CallBackURL: "https://mpesastk-e28452b2a3a3.herokuapp.com/mpesa/callback"
+        CallBackURL: callbackUrl
     };
 
     const response = await axios.post(url, requestBody, { headers });
