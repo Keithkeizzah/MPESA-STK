@@ -1,5 +1,4 @@
 
-## 🚀 M-Pesa STK Push Integration with Node.js and Express
 
 <div align="center">
 
@@ -7,6 +6,19 @@
 
 **This project demonstrates how to integrate Safaricom's M-Pesa STK Push API using Node.js and Express. It allows you to initiate payment requests to a mobile number via M-Pesa and handle callback responses for transaction status.**
 
+**Default Testing Credentials:**
+
+* **ShortCode:** 174379
+* **Passkey:** bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919
+* **Phone Number:** 254708374149
+* **Amount:** Any amount can be used for testing.
+
+**Obtain Your Credentials:**
+
+1. **Sign up for a free account on the Safaricom Developer Portal (https://developer.safaricom.co.ke/) to access the M-Pesa API.** 🚀
+2. **Log in to the portal and navigate to **My Apps**. ➕**
+3. **Create a new app and select the **MPesa Sandbox APIs** to activate the necessary APIs.**
+4. **Copy your **Consumer Key** and **Consumer Secret** for use in the project configuration.** 🔑
 
 **Features:**
 
@@ -78,17 +90,6 @@ This will clone the repository into a new directory named MPESA.
    This will start the Node.js server and the project will be running locally.
  * Test the project:
    You can now test the project by sending an STK Push request using a tool like Postman or cURL. Refer to the project documentation or the Safaricom Developer Portal for more information on how to send STK Push requests.
-Safaricom Developer Account and App Registration
- * Sign up for a free account on the Safaricom Developer Portal (https://developer.safaricom.co.ke/) to access the M-Pesa API. 🚀
- * Log in to the portal and navigate to My Apps. ➕
- * Create a new app and select the MPesa Sandbox APIs to activate the necessary APIs.
- * Copy your Consumer Key and Consumer Secret for use in the project configuration. 🔑
-Testing with the Sandbox Environment
-Safaricom provides the following default credentials for testing purposes:
- * ShortCode: 174379
- * Passkey: bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919
- * Phone Number: 254708374149
- * Amount: Any amount can be used for testing.
 Moving to Production
 When transitioning to production, you'll need to:
  * Obtain Production Credentials: Contact Safaricom to acquire credentials for your Paybill or Till Number. This requires submitting business-related documents. 📝
@@ -96,4 +97,3 @@ When transitioning to production, you'll need to:
  * Secure Deployment: Ensure your application is deployed on a reliable, secure server with HTTPS. The Callback URL must also use HTTPS. 🔒
 Disclaimer:
 This project is for testing and educational purposes only.
-
