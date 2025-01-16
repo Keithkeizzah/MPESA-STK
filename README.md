@@ -1,98 +1,99 @@
 
-## M-Pesa STK Push Integration with Node.js and Express
+## 🚀 M-Pesa STK Push Integration with Node.js and Express
 
-This project demonstrates how to integrate Safaricom's M-Pesa STK Push API using Node.js and Express. It allows you to initiate payment requests to a mobile number via M-Pesa and handle callback responses for transaction status.
+<div align="center">
+
+</div>
+
+**This project demonstrates how to integrate Safaricom's M-Pesa STK Push API using Node.js and Express. It allows you to initiate payment requests to a mobile number via M-Pesa and handle callback responses for transaction status.**
+
 
 **Features:**
 
-* Initiate M-Pesa STK Push payments
-* Handle callback responses for transaction status
+* Initiate M-Pesa STK Push payments 💸
+* Handle callback responses for transaction status ✅
 
 **Prerequisites:**
 
-1. **Safaricom Developer Account:** Sign up for a free account to access the M-Pesa API (https://developer.safaricom.co.ke/).
-2. **App Registration:**
-    * Log in to the Safaricom Developer Portal (https://developer.safaricom.co.ke/).
-    * Navigate to **My Apps** and create a new app.
-    * Select the **MPesa Sandbox APIs** for your app and copy your **Consumer Key** and **Consumer Secret**.
-3. **Callback URL:** You'll need a publicly accessible URL to receive transaction updates. You can use a deployment platform like Heroku or ngrok to expose your local server.
+1. **Git:** You'll need Git installed to clone the project repository. You can download and install Git from [https://git-scm.com/](https://git-scm.com/).
+2. **Node.js and npm:** You'll need Node.js and npm to run the project. You can download and install Node.js from [https://nodejs.org/en](https://nodejs.org/en).
+3. **Heroku Account:** Create a free account on Heroku at [https://www.heroku.com/](https://www.heroku.com/).
 
-**Examples:**
+## ⬆️ Deploying to Heroku
 
-* **Deployed URL (Heroku):**
+**1. Fork the Repository:** Fork the repository on GitHub to your own account.
 
-https://example.herokuapp.com/mpesa/callback
-* **Localhost (ngrok):**
-* Run `ngrok http 3000` and use the generated link:
-  ```
-  https://<random_string>.ngrok.io/mpesa/callback
-  ```
+**2. Deploy to Heroku:**
 
-**Testing with the Sandbox Environment**
+   * Click the button below to deploy your app to Heroku:
 
-Safaricom provides the following default credentials for testing purposes:
+     [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=github://Fortunatusmokaya/MPESA)
 
-* ShortCode: 174379
-* Passkey: bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919
-* Phone Number: 254708374149
-* Amount: Any amount can be used for testing.
+   * This will automatically create a Heroku app and deploy the project.
 
-**Steps to Configure the Project for Testing:**
+**3. Configure the App:**
 
-1. Open the `config.js` file.
-2. Replace the placeholder values with the default testing credentials provided above.
-3. Ensure your **Callback URL** is set to a public URL (ngrok or a deployed server).
+   * After deployment, navigate to your Heroku app's dashboard.
+   * In the **Settings** tab, find the **Config Vars** section.
+   * Add the following config vars:
 
-**Moving to Production**
+      * `CONSUMER_KEY`: Your Safaricom Consumer Key
+      * `CONSUMER_SECRET`: Your Safaricom Consumer Secret
+      * `SHORT_CODE`: Your Safaricom ShortCode
+      * `PASSKEY`: Your Safaricom Passkey
+      * `NUMBER`: The phone number to send the payment request to (for testing)
+      * `AMOUNT`: The amount to be paid (for testing)
 
-When transitioning to production, you'll need to:
+   * **Crucially, update the `CALLBACK_URL` config var to use the Heroku app URL.** 
+     - The Heroku app URL will be provided by Heroku after you create the app. 
+     - It will typically be in the format `https://<app-name>.herokuapp.com/mpesa/callback`.
 
-1. **Obtain Production Credentials:** Contact Safaricom to acquire credentials for your Paybill or Till Number. This requires submitting business-related documents like:
-  * Business license
-  * KRA PIN
-  * Proof of ownership of the Paybill/Till
-2. **Unique ShortCode and Passkey:** Safaricom will provide a custom ShortCode and Passkey linked to your account.
-3. **Secure Deployment:** Ensure your application is deployed on a reliable, secure server with HTTPS. The Callback URL must also use HTTPS.
+**Running the Project Locally**
 
-**Setting Up the Project**
+1. **Clone the repository:**
 
-There are two ways to configure the project:
+   Open your terminal and navigate to the directory where you want to clone the repository. Then, run the following command to clone the `MPESA` repository from GitHub:
 
-1. **Edit the `config.js` file.**
-2. **Use environment variables.**
+   ```bash
+   git clone [https://github.com/Fortunatusmokaya/MPESA.git](https://github.com/Fortunatusmokaya/MPESA.git)
 
-**Configuring `config.js`**
+This will clone the repository into a new directory named MPESA.
+ * Navigate to the project directory:
+   After the cloning is complete, navigate to the project directory by running the following command:
+   cd MPESA
 
-Fill in the following placeholders in the `config.js` file:
+ * Install dependencies:
+   Once you are inside the project directory, install the required dependencies by running the following command:
+   npm install
 
-* `consumerKey`
-* `consumerSecret`
-* `shortCode`
-* `passkey`
-* `number`
-* `amount`
-* `callbackUrl`
-
-**How to Get API Secrets from the Safaricom Sandbox**
-
-1. **Sign In:** Log in to the Safaricom Developer Portal (https://developer.safaricom.co.ke/).
-2. **Create a New App:**
-  * Navigate to **My Apps** and click **Create a New App**.
-  * Select the **MPesa Sandbox APIs** to activate the necessary APIs.
-3. **Copy Credentials:** Once the app is created, you'll see your Consumer Key and Consumer Secret.
-4. **Activate STK Push API:** Go to **API Settings** for your app and activate the **M-Pesa Express (STK Push) API**.
-
-**Running the Project**
-
-1. **Install dependencies:**
-
- ```bash
- npm install
-
+   This will install all the necessary Node.js packages required to run the project.
+ * (Optional) Configure the project:
+   There are two ways to configure the project:
+   * Edit the config.js file: The config.js file contains placeholder values for the M-Pesa API credentials. You can replace these placeholders with your own credentials obtained from the Safaricom Developer Portal (https://developer.safaricom.co.ke/).
+   * Use environment variables: You can set the environment variables for the M-Pesa API credentials instead of modifying the config.js file. Refer to the project documentation for more information on how to set environment variables.
  * Run the server:
+   After you have configured the project (or if you are using the default testing credentials), you can start the server by running the following command:
    node index.js
 
- * Trigger an STK Push request: Use a tool like Postman or cURL to send a POST request.
- * Check the Callback URL or console for responses.
-References
- * Safaricom Developer Portal:
+   This will start the Node.js server and the project will be running locally.
+ * Test the project:
+   You can now test the project by sending an STK Push request using a tool like Postman or cURL. Refer to the project documentation or the Safaricom Developer Portal for more information on how to send STK Push requests.
+Safaricom Developer Account and App Registration
+ * Sign up for a free account on the Safaricom Developer Portal (https://developer.safaricom.co.ke/) to access the M-Pesa API. 🚀
+ * Log in to the portal and navigate to My Apps. ➕
+ * Create a new app and select the MPesa Sandbox APIs to activate the necessary APIs.
+ * Copy your Consumer Key and Consumer Secret for use in the project configuration. 🔑
+Testing with the Sandbox Environment
+Safaricom provides the following default credentials for testing purposes:
+ * ShortCode: 174379
+ * Passkey: bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919
+ * Phone Number: 254708374149
+ * Amount: Any amount can be used for testing.
+Moving to Production
+When transitioning to production, you'll need to:
+ * Obtain Production Credentials: Contact Safaricom to acquire credentials for your Paybill or Till Number. This requires submitting business-related documents. 📝
+ * Unique ShortCode and Passkey: Safaricom will provide a custom ShortCode and Passkey linked to your account. 🔑
+ * Secure Deployment: Ensure your application is deployed on a reliable, secure server with HTTPS. The Callback URL must also use HTTPS. 🔒
+Disclaimer:
+This project is for testing and educational purposes only.
+
