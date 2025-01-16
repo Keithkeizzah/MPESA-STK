@@ -1,4 +1,4 @@
-
+## MPESA STK PUSH API
 
 <div align="center">
 
@@ -10,7 +10,7 @@
 
 * **ShortCode:** 174379
 * **Passkey:** bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919
-* **Phone Number:** 254708374149
+* **Phone Number:** any Safaricom mpesa registered number 
 * **Amount:** Any amount can be used for testing.
 
 **Obtain Your Credentials:**
@@ -60,7 +60,7 @@
      - The Heroku app URL will be provided by Heroku after you create the app. 
      - It will typically be in the format `https://<app-name>.herokuapp.com/mpesa/callback`.
 
-**Running the Project Locally**
+## Running the Project Locally
 
 1. **Clone the repository:**
 
@@ -89,11 +89,14 @@ This will clone the repository into a new directory named MPESA.
 
    This will start the Node.js server and the project will be running locally.
  * Test the project:
-   You can now test the project by sending an STK Push request using a tool like Postman or cURL. Refer to the project documentation or the Safaricom Developer Portal for more information on how to send STK Push requests.
-Moving to Production
+   You can now test the project by sending an STK Push request using a tool like Postman or cURL.
+
+## Moving to Production
 When transitioning to production, you'll need to:
  * Obtain Production Credentials: Contact Safaricom to acquire credentials for your Paybill or Till Number. This requires submitting business-related documents. 📝
  * Unique ShortCode and Passkey: Safaricom will provide a custom ShortCode and Passkey linked to your account. 🔑
  * Secure Deployment: Ensure your application is deployed on a reliable, secure server with HTTPS. The Callback URL must also use HTTPS. 🔒
-Disclaimer:
+
+
+## Disclaimer:
 This project is for testing and educational purposes only.
