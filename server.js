@@ -63,7 +63,7 @@ app.post('/mpesa/callback', (req, res) => {
         console.log('TransactionDate:', details.TransactionDate);
         console.log('PhoneNumber:', details.PhoneNumber);
 
-        // You can save this data to a database or perform any other action
+        
     } else {
         console.log('Payment failed or was cancelled:', callbackData.Body.stkCallback.ResultDesc);
     }
