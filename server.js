@@ -1,16 +1,12 @@
 const express = require('express');
 const axios = require('axios');
 const bodyParser = require('body-parser');
+const config = require('./config');
 
 const app = express();
 app.use(bodyParser.json());
 
-const consumerKey = "ERkqnycHkHAhBEGSnJLYYZdZVVZZj9GQn75faJS9bqhW25pA";
-const consumerSecret = "MHnGXDwv6szWXFjXM0I8ALPQEMvnZACcZHDf1F95kaW6xAvmwrBmlFrv4x2bAVUT";
-const shortCode = "174379";
-const passkey = "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919";
-const number = process.env.PUSHNUMBER;
-const amount = process.env.AMOUNT;
+const { consumerKey, consumerSecret, shortCode, passkey, number, amount } = config;
 
 const getAccessToken = async () => {
     const url = "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials";
