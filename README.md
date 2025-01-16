@@ -85,7 +85,7 @@ This will clone the repository into a new directory named MPESA.
    * Use environment variables: You can set the environment variables for the M-Pesa API credentials instead of modifying the config.js file. Refer to the project documentation for more information on how to set environment variables.
  * Run the server:
    After you have configured the project (or if you are using the default testing credentials), you can start the server by running the following command:
-   node index.js
+   node server.js
 
    This will start the Node.js server and the project will be running locally.
  * Test the project:
@@ -93,8 +93,11 @@ This will clone the repository into a new directory named MPESA.
 
 ## Moving to Production
 When transitioning to production, you'll need to:
+
  * Obtain Production Credentials: Contact Safaricom to acquire credentials for your Paybill or Till Number. This requires submitting business-related documents. 📝
+
  * Unique ShortCode and Passkey: Safaricom will provide a custom ShortCode and Passkey linked to your account. 🔑
+
  * Secure Deployment: Ensure your application is deployed on a reliable, secure server with HTTPS. The Callback URL must also use HTTPS. 🔒
 
 
