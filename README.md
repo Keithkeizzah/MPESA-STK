@@ -39,7 +39,7 @@
 
    * Click the button below to deploy your app to Heroku:
 
-     [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=github://Fortunatusmokaya/MPESA)
+     [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=github://Fortunatusmokaya/MPESA-STK)
 
    * This will automatically create a Heroku app and deploy the project.
 
@@ -64,30 +64,37 @@
 
 1. **Clone the repository:**
 
-   Open your terminal and navigate to the directory where you want to clone the repository. Then, run the following command to clone the `MPESA` repository from GitHub:
+   Open your terminal and navigate to the directory where you want to clone the repository. Then, run the following command to clone the `MPESA-STK` repository from GitHub:
 
    ```bash
-   git clone [https://github.com/Fortunatusmokaya/MPESA.git](https://github.com/Fortunatusmokaya/MPESA.git)
+   git clone [https://github.com/Fortunatusmokaya/MPESA-STK.git](https://github.com/Fortunatusmokaya/MPESA-STK.git)
 
 This will clone the repository into a new directory named MPESA.
  * Navigate to the project directory:
    After the cloning is complete, navigate to the project directory by running the following command:
+   
+   ```bash
    cd MPESA
 
  * Install dependencies:
    Once you are inside the project directory, install the required dependencies by running the following command:
+      ```bash
    npm install
 
-   This will install all the necessary Node.js packages required to run the project.
+  - This will install all the necessary Node.js packages required to run the project.
  * (Optional) Configure the project:
    There are two ways to configure the project:
    * Edit the config.js file: The config.js file contains placeholder values for the M-Pesa API credentials. You can replace these placeholders with your own credentials obtained from the Safaricom Developer Portal (https://developer.safaricom.co.ke/).
    * Use environment variables: You can set the environment variables for the M-Pesa API credentials instead of modifying the config.js file. Refer to the project documentation for more information on how to set environment variables.
+  
+   * 
  * Run the server:
    After you have configured the project (or if you are using the default testing credentials), you can start the server by running the following command:
+
+      ```bash
    node server.js
 
-   This will start the Node.js server and the project will be running locally.
+  - This will start the Node.js server and the project will be running locally.
  * Test the project:
    You can now test the project by sending an STK Push request using a tool like Postman or cURL.
 
