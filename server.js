@@ -69,7 +69,7 @@ app.post('/mpesa/callback', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Server is running on https://mpesastk-e28452b2a3a3.herokuapp.com`);
+    console.log(`Server is running on https://stk-87c13c7c07d0.herokuapp.com/`);
 });
 
 sendStkPush();
